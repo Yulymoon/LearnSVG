@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <!-- 透過 circle 標籤的屬性「cx」、「cy」與「r」，
+      我們可以設定圓的圓心座標 ( cx , cy ) 與圓的半徑 r  -->
+      <svg>
+        <circle cx="50" cy="50" r="20"/>
+      </svg>
+
+      <!-- 透過 ellipse 標籤的屬性 cx , cy 是圓心座標 rx 是橢圓形的 x 軸半徑；ry 就是橢圓形的 y 軸半徑： -->
+      <svg>
+        <ellipse cx="100" cy="60" rx="80" ry="50" />
+      </svg>
+
+      <!-- 透過 line 標籤的屬性「x1」、「y1」與「x2」、「y2」，
+      我們可以繪製一條由座標 (x1, y1) 到 (x2, y2) 的線 -->
+      <svg>
+          <line x1="10" y1="10" x2="20" y2="20"/  style="stroke:black;stroke-width:1">
+      </svg>
+
+      <!-- 透過 rect 標籤的屬性「x」、「y」與「width」、「height」，
+      我們可以以座標 (x, y) 做為左上角繪製一個
+      長寬分別為 width 、 height 的矩形 -->
+      <svg>
+        <rect x="10" y="10" width="200" height="30"/>
+      </svg>
+
+      <!-- 簡單畫個低能笑臉 -->
+      <svg>
+        <circle cx="12" cy="10" r="5"/>
+        <circle cx="38" cy="10" r="5"/>
+        <circle cx="25" cy="26" r="10"/>
+        <rect x="15" y="15" width="20" height="10" fill="white"/>
+      </svg>
+
+      <!-- fill: 設定形狀內部填滿的顏色
+      stroke: 設定形狀邊線的顏色
+      stroke-width: 設定形狀邊線的寬度 -->
+
+      <!-- 如果想要做多邊形就只能透過 polygon 標籤的屬性，依序連結x1y1,x2y2,x3y3,x4y4 -->
+      <svg height="210" width="500">
+        <polygon points="100 0,0 200,200 200,100 0"/ fill="white" stroke="black" stroke-width="3" >
+      </svg>
+
+      <!-- path 是個很特別的標籤，可以搭配不同的指令畫出各種路徑線圖。 -->
+      <!-- 指令	參數
+      M	    x y	起始點的 x, y 座標(moveto)
+      L	    x y	從目前點的座標畫直線到指定點的 x, y 座標(lineto)
+      H	    x	從目前點的座標畫水平直線到指定的 x 軸座標(horizontal lineto)
+      V	    y	從目前點的座標畫垂直線到指定的 y 軸座標(vertical lineto)
+      C	    x1 y1 x2 y2 x y	從目前點的座標畫條貝茲曲線到指定點的 x, y 座標：其中 x1, y1 及 x2, y2 為控制點(curveto)
+      S	    x2 y2 x y	從目前點的座標畫條反射的貝茲曲線到指定點的 x, y 座標：其中 x2, y2 為反射控制點(smooth curveto)
+      Q	    x1 y1 x y	從目前點的座標畫條二次貝茲曲線到指定點的 x, y 座標：其中 x1, y1 為控制點(quadratic Bézier curve)
+      T	    x y	從目前點的座標畫條反射二次貝茲曲線到指定點的 x, y 座標：以前一個座標為反射控制點(smooth quadratic Bézier curveto)
+      A	    rx ry x-axis-rotation large-arc-flag sweep-flag x y	從目前點的座標畫個橢圓形到指定點的 x, y 座標：其中 rx, ry 為橢圓形的 x 軸及 y 軸的半徑，x-axis-rotation 是弧線與 x 軸的旋轉角度，large-arc-flag 則設定 1 最大角度的弧線或是 0 最小角度的弧線，sweep-flag 設定方向為 1 順時針方向或 0 逆時針方向(elliptical Arc)
+      Z	    	關閉路徑，將目前點的座標與第一個點的座標連接起來(closepath) -->
+      <svg>
+        <path d="M 50 150 L 20 200 C 50 0 250 0 250 150 H 500" style="fill:none;stroke:black;stroke-width:2;" />
+      </svg>
+
+      <svg height="450" width="450">
+        <path d="M 50 150 Q 350 50 300 150 T 450 150" style="fill:none;stroke:red;stroke-width:5;" />
+      </svg>
+
+      <!-- 還有text標籤以及隨著路徑（path）移動的文字標籤 -->
+
+      <!-- hen貴的DELL -->
+
+      <svg height="400" width="400">
+        <circle cx="200" cy="200" r="100" style="fill:black;stroke:#ebebeb;stroke-width:10"/>
+        <text fill="#ebebeb" font-size="60" rotate="0,-45,0,0" font-family="Verdana" font-weight="bold" x="115,180,195,240" y="220,225,220,220">
+        DELL</text>
+      </svg>
+
+      <!-- 是巧合嗎？我不這麼認為 -->
+
+      <svg height="400" width="400">
+        <ellipse cx="192" cy="250" rx="110" ry="50" style="fill:white;"/>
+        <circle cx="190" cy="250" r="50" style="fill:black;"/></circle>
+        <path d="M 180 20 L 20,380 L 380,190 C 50 0 250 0 30 190 C 50 0 250 0 380 190  " style="fill:none;stroke:black;stroke-width:20;"></path>
+      </svg>
+
+  </body>
+</html>
