@@ -15,39 +15,39 @@
       </svg>
 
       <!-- 透過 ellipse 標籤的屬性 cx , cy 是圓心座標 rx 是橢圓形的 x 軸半徑；ry 就是橢圓形的 y 軸半徑： -->
-      <svg>
+      <!-- <svg>
         <ellipse cx="100" cy="60" rx="80" ry="50" />
-      </svg>
+      </svg> -->
 
       <!-- 透過 line 標籤的屬性「x1」、「y1」與「x2」、「y2」，
       我們可以繪製一條由座標 (x1, y1) 到 (x2, y2) 的線 -->
-      <svg>
+      <!-- <svg>
           <line x1="10" y1="10" x2="120" y2="200"/  style="stroke:black;stroke-width:1">
-      </svg>
+      </svg> -->
 
       <!-- 透過 rect 標籤的屬性「x」、「y」與「width」、「height」，
       我們可以以座標 (x, y) 做為左上角繪製一個
       長寬分別為 width 、 height 的矩形 -->
-      <svg>
+      <!-- <svg>
         <rect x="10" y="10" width="200" height="30"/>
-      </svg>
+      </svg> -->
 
       <!-- 簡單畫個低能笑臉 -->
-      <svg>
+      <!-- <svg>
         <circle cx="12" cy="10" r="5"/>
         <circle cx="38" cy="10" r="5"/>
         <circle cx="25" cy="26" r="10"/>
         <rect x="15" y="15" width="20" height="10" fill="white"/>
-      </svg>
+      </svg> -->
 
       <!-- fill: 設定形狀內部填滿的顏色
       stroke: 設定形狀邊線的顏色
       stroke-width: 設定形狀邊線的寬度 -->
 
       <!-- 如果想要做多邊形就只能透過 polygon 標籤的屬性，依序連結x1y1,x2y2,x3y3,x4y4 -->
-      <svg height="210" width="500">
+      <!-- <svg height="210" width="500">
         <polygon points="100 0,0 200,200 200,100 0"/ fill="white" stroke="black" stroke-width="3" >
-      </svg>
+      </svg> -->
 
       <!-- path 是個很特別的標籤，可以搭配不同的指令畫出各種路徑線圖。 -->
       <!-- 指令	參數
@@ -61,32 +61,32 @@
       T	    x y	從目前點的座標畫條反射二次貝茲曲線到指定點的 x, y 座標：以前一個座標為反射控制點(smooth quadratic Bézier curveto)
       A	    rx ry x-axis-rotation large-arc-flag sweep-flag x y	從目前點的座標畫個橢圓形到指定點的 x, y 座標：其中 rx, ry 為橢圓形的 x 軸及 y 軸的半徑，x-axis-rotation 是弧線與 x 軸的旋轉角度，large-arc-flag 則設定 1 最大角度的弧線或是 0 最小角度的弧線，sweep-flag 設定方向為 1 順時針方向或 0 逆時針方向(elliptical Arc)
       Z	    	關閉路徑，將目前點的座標與第一個點的座標連接起來(closepath) -->
-      <svg>
+      <!-- <svg>
         <path d="M 50 150 L 20 200 C 50 0 250 0 250 150 H 500" style="fill:none;stroke:black;stroke-width:2;" />
-      </svg>
+      </svg> -->
 
-      <svg height="450" width="450">
+      <!-- <svg height="450" width="450">
         <path d="M 50 150 Q 350 50 300 150 T 450 150" style="fill:none;stroke:red;stroke-width:5;" />
-      </svg>
+      </svg> -->
 
       <!-- 還有text標籤以及隨著路徑（path）移動的文字標籤 -->
 
       <!-- hen貴的DELL -->
 
-      <svg height="400" width="400">
+      <!-- <svg height="400" width="400">
         <circle cx="200" cy="200" r="100" style="fill:black;stroke:#ebebeb;stroke-width:10"/>
         <text fill="#ebebeb" font-size="60" rotate="0,-45,0,0" font-family="Verdana" font-weight="bold" x="115,180,195,240" y="220,225,220,220">
         DELL</text>
-      </svg>
+      </svg> -->
 
       <!-- nike logo -->
 
-      <svg height="250" width="250">
+      <!-- <svg height="250" width="250">
         <path d="M 50 80 Q 0 180 180 70 50 130 50 80" style="fill:black;" />
-      </svg>
+      </svg> -->
 
       <!-- transform不能做的動畫 -->
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
            width="360" height="120"  viewBox="-10 10 360 55">
         <path d="M-1,1.499h83c0,0,10.5,1,10.5,11.25s-10.25,12.25-10.25,12.25h-43.5c0,0-10.75,0.75-11.75,11.5s9.75,12.25,9.75,12.25H343.5"
               stroke="#529fd9" stroke-width="2" fill="none" id="wire"></path>
@@ -95,10 +95,10 @@
             <mpath xlink:href="#wire"></mpath>
           </animateMotion>
         </circle>
-      </svg>
+      </svg> -->
 
       <!-- 影格動畫 -->
-      <svg id="smokes" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      <!-- <svg id="smokes" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
            viewBox="0 0 30 30" width="100%" height="100%">
           <g>
               <path id="smoke" fill="none" stroke="#999999" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
@@ -110,10 +110,12 @@
               <use xlink:href="#smoke" transform="translate(10,0)" />
               <use xlink:href="#smoke" transform="translate(20,0)" />
           </g>
-      </svg>
+      </svg> -->
 
       <!-- svg vs canvas差別 -->
-      <a href="https://msdn.microsoft.com/zh-tw/library/gg193983(v=vs.85).aspx">svg vs canvas</a>
+      <div style="text-align:center;">
+        <a href="https://msdn.microsoft.com/zh-tw/library/gg193983(v=vs.85).aspx">svg vs canvas</a>
+      </div>
 
       <!-- 是巧合嗎？我不這麼認為 -->
       <!--
